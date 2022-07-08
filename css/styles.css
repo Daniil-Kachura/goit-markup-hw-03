@@ -1,6 +1,15 @@
+/* html (
+
+box-sizing: border-box;
+)
+ 
+*,
+*::before,
+*::after (
+box-sizing: border-box;
+) */
 /* палитра кольорів */
 :root{
-   /* main colors */
 --background-color:#ffffff;
 --text-color:#212121;
 --hover-color:#2196F3;
@@ -43,26 +52,59 @@ a{
 }
 
 ul{
+	padding-left: 0;
 	margin: 0;
 	list-style: none;
 	text-decoration: none;
-}
 
+}
+section{
+	padding-top: 94px;
+	padding-bottom: 94px;
+}
 	/* пораховано интерлиньяж (поділив вbсоту на розмір тесту) */
 .logo-start{ 
 	font-family: 'Raleway';
 	font-size: 26px;
 	line-height: 1.19;
 	color: var(--hover-color);
+
 }
 
 .logo-end{
 	color: var(--active-btn-text);
 }
 
-.style-list{
-	padding: 0;
+.styless-nav .style-list{
+
+	display: flex;
+	margin-left: 95px;
 }
+.main-nav{
+	display: flex;
+	align-items: center;
+}
+
+/* Крайняяя геометрия- обрезали лишние отступы, оябзательно!!!
+ 1)ЦЕ ВАРІАНТ СУСІДА, КОЛИ ТИ ЗАДАЄШ ВСІМ СУСІДНІМ ЕЛЕМЕНТАМ ВІДСТУП */
+
+.styless-nav .style-item + .style-item {
+	margin-left: 50px;
+}
+
+/*
+2)НАЙЛІПШИЙ ВАРІАНТ. КОЛИ ТИ ЗАДАЕШЬ ВІДСТУП ВСІМ КРІМ ОСТАННЬГО
+
+ .styless-nav .style-item:not(:last-child){
+	margin-right: 50px;
+} */
+
+
+/* 
+3) ЦЕЙ ОДИН З ВАРІАНТІВ 
+.styless-nav .style-item:last-child{
+	margin-right: 0;
+} */
 
 	/* наведення та табуляція для нав та кнопок у портфоліо */
 .style-item :hover,
@@ -71,19 +113,32 @@ ul{
 	color: var(--hover-color);
 }
 
-	/* колір лінків у хедері */
-.nav-link{
+	/* колір лінків у хедері-----что бЫ удобнее было попадать 
+	на сыылке сделали ее блочным елементом и добавили падинг сверху и снизу */
+.nav-link
+{
+	display: block;
+	padding-top: 20px;
+	padding-bottom: 20px;
+
 	font-weight: 500;
 	line-height: 1.14;
 	letter-spacing: 0.02em;
 	color: var(--text-color);
+	
 }
 
 .acctive_nav_link
 {
 	color: var(--hover-color);
 }
-
+.auth-nav{
+	display: flex;
+	margin-left: auto;
+}
+.style-list .style-item + .style-item{
+	margin-left: 50px;
+}
 	/* колір тексту для меіл та тел */
 .contact-link{
 	color: var(--mail-tel-color);
@@ -109,6 +164,7 @@ ul{
 
 	/* Шапка с кнопкой */
 .hero-btn{
+
 	color: var(--background-color);
 	background-color: var(--hover-color);
 	box-shadow: 0px 4px 4px var(--shadov-btn);
@@ -116,7 +172,7 @@ ul{
 	font-weight: 700;
 	font-size: 16px;
 	display: flex;
-	line-height: 1,87;
+	line-height: 1.87;
 	align-items: center;
 	text-align: center;
 	letter-spacing: 0.06em;
