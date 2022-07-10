@@ -43,6 +43,7 @@ body{
 .header{
 	max-width: 1600px;
 	min-height: 80px;
+
 	background-color: var(--background-color);
 	border-bottom: 1px solid var(--border-color);
 }
@@ -54,21 +55,32 @@ a{
 ul{
 	padding-left: 0;
 	margin: 0;
+
 	list-style: none;
 	text-decoration: none;
 
 }
+.container{
+width: 1230px;
+padding-left: 15px;
+padding-right: 15px;
+margin-left: auto;
+margin-right: auto;
+}
+
 section{
+
 	padding-top: 94px;
 	padding-bottom: 94px;
 }
 	/* пораховано интерлиньяж (поділив вbсоту на розмір тесту) */
 .logo-start{ 
+
 	font-family: 'Raleway';
 	font-size: 26px;
 	line-height: 1.19;
 	color: var(--hover-color);
-
+	
 }
 
 .logo-end{
@@ -79,7 +91,9 @@ section{
 
 	display: flex;
 	margin-left: 95px;
+
 }
+
 .main-nav{
 	display: flex;
 	align-items: center;
@@ -164,6 +178,12 @@ section{
 
 	/* Шапка с кнопкой */
 .hero-btn{
+	display: flex;
+	align-items: center;
+	text-align: center;
+	padding: 10px 32px;
+	margin: 0 auto;
+	border: 0;
 
 	color: var(--background-color);
 	background-color: var(--hover-color);
@@ -171,14 +191,9 @@ section{
 	border-radius: 4px;
 	font-weight: 700;
 	font-size: 16px;
-	display: flex;
 	line-height: 1.87;
-	align-items: center;
-	text-align: center;
 	letter-spacing: 0.06em;
-	padding: 10px 32px;
-	margin: 0 auto;
-	border: 0;
+	
 	cursor: pointer;
 }
 
@@ -196,10 +211,25 @@ section{
 
 	/* Особенности */
 	/* заголовок не наследет размери текста  */
+	
+.peculiarities-list{
+	display: flex;
+	align-items: center;	
+
+	}
+	.peculiarities-list .peculiarities-item + .peculiarities-item{
+		margin-left: 30px;
+	}
+	.peculiarities-item{
+		
+	}
+
 .peculiarities-title{
+
 	line-height: 1.14;
 	text-transform: uppercase;
 	font-size: 14px;
+
 }
 
 .peculiarities-text{
@@ -213,10 +243,29 @@ section{
 	line-height: 1.16;
 	text-align: center;
 }
+.style-work-list{
+	display: flex;
+}
+
+.style-work-list .work-item + .work-item{
+	margin-left: 30px;
+   
+}
+
+    /* Наша команда */
+   
+.team-list{
+	display: flex;
+
+}
+.team-list .team-item + .team-item{
+	margin-left: 30px;
+}
 
 .team-item{
 	width: 270px;
 	background-color: var(--background-color);
+
 	/* material shadow v1 */
 	box-shadow:
 	0px 1px 3px var(--boxshadov-clor1),
@@ -252,12 +301,23 @@ section{
 	clip: rect(0 0 0 0);
 	overflow: hidden;
 }
+						/* ПОРТФОЛІО */
 
 /* колір фону для партфоліо */
 .section-portfolio{
 	background-color: var(--background-color) ;
 }
 
+.btn-list{
+	display: flex;
+	margin-left: 520px;
+	margin-top: 100px;
+	margin-bottom: 55px;
+}
+
+.btn-list .btn-item + .btn-item{
+	margin-left: 8px;
+}
 /* колір тіней кнопки при наведені у портфоліо */
 .style-button{
 	box-shadow: 
@@ -288,11 +348,19 @@ section{
 	color: var(--background-color);
 }
 
+.project-list{
+	display: flex;
+	flex-wrap: wrap;
+}
 .card-list{
+	margin-right: 30px;
+	margin-bottom: 30px;
 	background-color: var(--background-color);
 	border: 1px solid var(--border-color);
 }
-
+.card-list:nth-child(3n){
+	margin-right: 0;
+}
 .card-title{
 	font-size: 18px;
 	line-height: 36px;
@@ -309,20 +377,33 @@ section{
 	color: var(--mail-tel-color);
 	margin: 0 24px;
 }
+        /* -- футер - */
 
 .footer{
 	background: var(--background-header-color);
 }
 
 .logo-footer, .adress-link{
+
 	color: var(--background-color);
 	font-style: normal;
+	
+}
+.adress-link{
+	display: block;
+	margin-top: 20px;
+	margin-bottom: 9px;
+}
+
+.auth-footer .footer-item + .footer-item{
+	margin-top: 9px;
 }
 
 .mail-footer{
 	color:var(--text-mail-footer); 
 	text-decoration: none; 
 }
+
 .mail-footer:hover,
 .mail-footer:focus
 {
