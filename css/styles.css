@@ -1,13 +1,4 @@
-/* html (
 
-box-sizing: border-box;
-)
- 
-*,
-*::before,
-*::after (
-box-sizing: border-box;
-) */
 /* палитра кольорів */
 :root{
 --background-color:#ffffff;
@@ -17,10 +8,10 @@ box-sizing: border-box;
 --textlogo-color: #000000;
 --mail-tel-color:#757575;
 --background-header-color:#2F303A;
---text-color-btn:#000000;
---background-color-btn:#00ad23;
+--text-color-btn:#ffffff;
+--background-color-btn: #188CE8;
 --active-btn-text:#000000;
---active-btn-background:#961a04;
+--active-btn-shadov:#00000026;
 --boxshadov-clor1:#0000001f;
 --boxshadov-clor2:#00000024;
 --boxshadov-clor3:#00000033;
@@ -30,6 +21,12 @@ box-sizing: border-box;
 --shadov-btn:#00000026;
 }
 
+*,
+*::before,
+*::after {
+    margin: 0;
+
+}
 	/* body- те що чаще застосовується */
 body{
 	font-family: 'Roboto', sans-serif;
@@ -41,9 +38,7 @@ body{
 
 	/* header- висота, бордер та фон */
 .header{
-	max-width: 1600px;
-	min-height: 80px;
-
+	
 	background-color: var(--background-color);
 	border-bottom: 1px solid var(--border-color);
 }
@@ -61,18 +56,21 @@ ul{
 
 }
 .container{
-width: 1230px;
-padding-left: 15px;
-padding-right: 15px;
-margin-left: auto;
-margin-right: auto;
+	width: 1200px;
+	padding:0 15px;
+
+	margin-left: auto;
+	margin-right: auto;
+
 }
 
-section{
-
-	padding-top: 94px;
-	padding-bottom: 94px;
+.section{
+   padding: 94px 0;
 }
+.section-no-pading{
+	padding-bottom: 0;
+}
+
 	/* пораховано интерлиньяж (поділив вbсоту на розмір тесту) */
 .logo-start{ 
 
@@ -132,8 +130,8 @@ section{
 .nav-link
 {
 	display: block;
-	padding-top: 20px;
-	padding-bottom: 20px;
+	padding-top: 30px;
+	padding-bottom: 30px;
 
 	font-weight: 500;
 	line-height: 1.14;
@@ -160,10 +158,14 @@ section{
 	line-height: 1.14;
 	letter-spacing: 0.02em;
 }
-
+.section-order{
+	background-color: var(--background-header-color);
+}
 	/* main styles */
 .hero {
-	background-color: var(--background-header-color); 
+	
+	padding-top: 200px; 
+	padding-bottom: 210px;
 }
 
 .hero-title{
@@ -174,6 +176,12 @@ section{
 	letter-spacing: 0.06em;
 	text-transform: uppercase;
 	color: var(--background-color);
+
+	width: 696px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 0;
+	margin-bottom: 40px;
 }
 
 	/* Шапка с кнопкой */
@@ -201,12 +209,14 @@ section{
 .hero-btn:focus
 {
 	color: var(--text-color-btn);
-	background: var(--background-color-btn);
+	background-color: var(--background-color-btn);
+	box-shadow: 0px 4px 4px var(--active-btn-shadov);
+	border-radius: 4px;
 }
 
 .hero-btn:active{
 	color: var(--text-color-btn);
-	background-color: var(--active-btn-background);
+	background-color: var(--background-color-btn);
 }
 
 	/* Особенности */
@@ -216,15 +226,17 @@ section{
 	display: flex;
 	align-items: center;	
 
-	}
-	.peculiarities-list .peculiarities-item + .peculiarities-item{
-		margin-left: 30px;
-	}
-	.peculiarities-item{
+}
+.peculiarities-list .peculiarities-item + .peculiarities-item{
+	margin-left: 30px;
+}
+
+.peculiarities-item{
 		
-	}
+}
 
 .peculiarities-title{
+	margin-bottom: 10px;
 
 	line-height: 1.14;
 	text-transform: uppercase;
@@ -238,7 +250,13 @@ section{
 }
 
 /* Чем мы занимаемся */
+.section-work{
+	padding-bottom: 94px;
+
+}
+
 .section-titel{
+	padding-bottom: 50px;
 	font-size: 36px;
 	line-height: 1.16;
 	text-align: center;
@@ -246,14 +264,20 @@ section{
 .style-work-list{
 	display: flex;
 }
-
+.work-item{
+	display: block;
+	width: 370px;
+}
 .style-work-list .work-item + .work-item{
 	margin-left: 30px;
    
 }
 
-    /* Наша команда */
-   
+   		 /* Наша команда */
+ .team{
+	background-color: #F5F4FA;
+ }  
+
 .team-list{
 	display: flex;
 
@@ -275,6 +299,9 @@ section{
 }
 
 .name-team{
+	margin-top: 30px;
+	margin-bottom: 10px;
+
 	font-weight: 500;
 	font-size: 16px;
 	line-height: 1.18;
@@ -282,6 +309,8 @@ section{
 }
 
 .position-team{
+	margin-bottom: 30px;
+
 	font-size: 16px;
 	line-height: 1.18;
 	text-align: center;
@@ -308,18 +337,29 @@ section{
 	background-color: var(--background-color) ;
 }
 
+.portfolio-box{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+
+}
+
 .btn-list{
 	display: flex;
-	margin-left: 520px;
-	margin-top: 100px;
-	margin-bottom: 55px;
+	margin-bottom: 56px;
+	
 }
 
 .btn-list .btn-item + .btn-item{
 	margin-left: 8px;
 }
+.btn-item{
+	
+}
 /* колір тіней кнопки при наведені у портфоліо */
 .style-button{
+
 	box-shadow: 
 	0px 3px 1px var(--boxshadov-clor1),
 	0px 1px 2px var(--boxshadov-clor2),
@@ -334,6 +374,7 @@ section{
 	color:  var(--text-color);
 	cursor: pointer;
 	border: 0;
+	
 }
 
 .style-button:hover,
@@ -347,19 +388,25 @@ section{
 	background-color: var(--hover-color);
 	color: var(--background-color);
 }
-
+					/* Наши работы */
 .project-list{
 	display: flex;
 	flex-wrap: wrap;
 }
-.card-list{
+.card-item{
 	margin-right: 30px;
 	margin-bottom: 30px;
 	background-color: var(--background-color);
 	border: 1px solid var(--border-color);
+	
+	width: 380px;
 }
-.card-list:nth-child(3n){
+.card-item:nth-child(3n){
 	margin-right: 0;
+	
+}
+.card-item:nth-last-child(-n +3){
+	margin-bottom: 0;
 }
 .card-title{
 	font-size: 18px;
@@ -380,6 +427,8 @@ section{
         /* -- футер - */
 
 .footer{
+	padding-top: 60px;
+	padding-bottom: 60px;
 	background: var(--background-header-color);
 }
 
@@ -390,6 +439,7 @@ section{
 	
 }
 .adress-link{
+	width: 230px;
 	display: block;
 	margin-top: 20px;
 	margin-bottom: 9px;
