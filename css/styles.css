@@ -261,13 +261,16 @@ ul{
 	line-height: 1.16;
 	text-align: center;
 }
+
 .style-work-list{
 	display: flex;
 }
+
 .work-item{
 	display: block;
 	width: 370px;
 }
+
 .style-work-list .work-item + .work-item{
 	margin-left: 30px;
    
@@ -354,6 +357,7 @@ ul{
 .btn-list .btn-item + .btn-item{
 	margin-left: 8px;
 }
+
 .btn-item{
 	
 }
@@ -392,14 +396,19 @@ ul{
 .project-list{
 	display: flex;
 	flex-wrap: wrap;
+
+	margin: -15px;
 }
+
 .card-item{
 	margin-right: 30px;
 	margin-bottom: 30px;
 	background-color: var(--background-color);
 	border: 1px solid var(--border-color);
+
 				/* ФИКСИРОВАНАЯ ВЕРСТКА ШИРИНА */
-	width: calc((100% - 60px)/ 3);
+	margin: 15px;
+	/* width: calc((100% - 60px)/ 3); */
 }
 
 .card-item:nth-child(3n){
